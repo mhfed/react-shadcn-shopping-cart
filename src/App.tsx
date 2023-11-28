@@ -1,13 +1,10 @@
-import { Button } from '@/components/ui/button';
-import { ModeToggle } from '@/components/mode-toggle';
+import { toast } from '@/components/ui/use-toast';
+import Routers from './routes';
 
 function App() {
   return (
     <>
-      <div>
-        <ModeToggle />
-        <Button>Click me</Button>
-      </div>
+      <Routers />
     </>
   );
 }
