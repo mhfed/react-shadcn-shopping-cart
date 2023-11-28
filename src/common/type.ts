@@ -1,3 +1,10 @@
+export interface IUser {
+  id?: number;
+  name?: string;
+  email: string;
+  password: string;
+}
+
 export interface Billboard {
   id: string;
   label: string;
@@ -26,7 +33,7 @@ export interface Color {
   value: string;
 }
 
-export interface Product {
+export interface IProduct {
   id: string;
   category: Category;
   description: string;
