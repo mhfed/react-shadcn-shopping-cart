@@ -41,5 +41,5 @@ export interface IProduct {
   price: string;
   size: Size;
   color: Color;
-  images: Image[];
+  img: string;
 }

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ShoppingBag } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ModeToggle } from './mode-toggle';
 
 const NavbarActions = () => {
   const navigate = useNavigate();
@@ -21,13 +22,14 @@ const NavbarActions = () => {
     <div className='ml-auto gap-x-4 items-center flex'>
       <Button
         onClick={handleGotoCart}
-        className='flex items-center rounded-full bg-black px-4 py-2'
+        className='flex items-center rounded-full px-4 py-2'
       >
-        <ShoppingBag size={20} color='white' />
-        <span className='ml-2 text-sm font-medium text-white'>
+        <ShoppingBag size={20} />
+        <span className='ml-2 text-sm font-medium'>
           {/* {cart.items.length} */}2
         </span>
       </Button>
+      <ModeToggle />
     </div>
   );
 };

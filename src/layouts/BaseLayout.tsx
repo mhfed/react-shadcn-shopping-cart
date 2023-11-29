@@ -1,14 +1,15 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Container from '@/components/ui/container';
 import { Outlet } from 'react-router-dom';
 
 const BaseLayout = () => {
   return (
     <div>
       <Header />
-      <main>
+      <Container>
         <Outlet />
-      </main>
+      </Container>
       <Footer />
     </div>
   );
