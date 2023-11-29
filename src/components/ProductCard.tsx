@@ -3,8 +3,7 @@ import { Expand, ShoppingCart } from 'lucide-react';
 
 import Currency from '@/components/ui/currency';
 import IconButton from '@/components/ui/icon-button';
-// import usePreviewModal from "@/hooks/use-preview-modal";
-// import useCart from "@/hooks/use-cart";
+import useCart from '@/hooks/useCart';
 import { IProduct } from '@/common/type';
 import { useNavigate } from 'react-router-dom';
 import { PreviewModal } from './PreviewModal';
@@ -15,12 +14,9 @@ interface ProductCard {
   data: IProduct;
 }
 
-const imgUrl = 'https://picsum.photos/200';
-
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const navigate = useNavigate();
-  // const previewModal = usePreviewModal();
-  //   const cart = useCart();
+  const cart = useCart();
 
   const handleClick = () => {
     navigate(`/product/${data?.id}`);
@@ -28,14 +24,12 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-
-    // previewModal.onOpen(data);
   };
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
 
-    // cart.addItem(data);
+    cart.addItem(data);
   };
 
   return (
@@ -46,7 +40,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       {/* Image & actions */}
       <div className='aspect-square rounded-xl relative'>
         <img
-          src={data?.img || imgUrl}
+          src={data?.img}
           alt=''
           className='aspect-square object-cover rounded-md'
         />

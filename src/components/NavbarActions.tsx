@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-// import useCart from '@/hooks/use-cart';
+import useCart from '@/hooks/useCart';
 import { ShoppingBag } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ const NavbarActions = () => {
     setIsMounted(true);
   }, []);
 
-  //   const cart = useCart();
+  const cart = useCart();
   const handleGotoCart = () => navigate('/cart');
   if (!isMounted) {
     return null;
@@ -25,9 +25,7 @@ const NavbarActions = () => {
         className='flex items-center rounded-full px-4 py-2'
       >
         <ShoppingBag size={20} />
-        <span className='ml-2 text-sm font-medium'>
-          {/* {cart.items.length} */}2
-        </span>
+        <span className='ml-2 text-sm font-medium'>{cart.items.length}</span>
       </Button>
       <ModeToggle />
     </div>
