@@ -8,7 +8,9 @@ const products = [
     id: 1,
     name: 'Nike Air Max 270 React',
     price: 170,
-    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2c8f0c1e-5f3a-4d0e-9e7c-4a5c6e5c1d3c/air-max-270-react-shoe-8KcW6q.jpg',
+    img: 'https://picsum.photos/400',
+    description:
+      "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1",
     category: {
       id: 1,
       name: 'Shoes',
@@ -18,7 +20,9 @@ const products = [
     id: 2,
     name: 'Nike Air Max 270 React',
     price: 170,
-    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2c8f0c1e-5f3a-4d0e-9e7c-4a5c6e5c1d3c/air-max-270-react-shoe-8KcW6q.jpg',
+    img: 'https://picsum.photos/400',
+    description:
+      "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1",
     category: {
       id: 1,
       name: 'Shoes',
@@ -28,7 +32,9 @@ const products = [
     id: 3,
     name: 'Nike Air Max 270 React',
     price: 170,
-    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2c8f0c1e-5f3a-4d0e-9e7c-4a5c6e5c1d3c/air-max-270-react-shoe-8KcW6q.jpg',
+    img: 'https://picsum.photos/400',
+    description:
+      "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1",
     category: {
       id: 1,
       name: 'Shoes',
@@ -38,7 +44,9 @@ const products = [
     id: 4,
     name: 'Nike Air Max 270 React',
     price: 170,
-    img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2c8f0c1e-5f3a-4d0e-9e7c-4a5c6e5c1d3c/air-max-270-react-shoe-8KcW6q.jpg',
+    img: 'https://picsum.photos/400',
+    description:
+      "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1",
     category: {
       id: 1,
       name: 'Shoes',
@@ -49,10 +57,10 @@ const products = [
 const HomePage = () => {
   return (
     <div className='space-y-10 pb-10'>
-      <div className='flex flex-col sm:flex-row graph justify-between'>
-        <div className='flex flex-col sm:flex-row subtle gap-10'>
+      <div className='flex flex-col sm:flex-row justify-between'>
+        <div className='flex flex-col sm:flex-row bg-[#ffffffb3] dark:bg-[#000000b3] gap-10'>
           <div className='px-3 sm:px-5 pt-5 flex gap-8 flex-col sm:pt-0'>
-            <div className='flex sm:pt-[130px] flex-col gap-3'>
+            <div className='flex sm:pt-[60px] flex-col gap-3'>
               <h1 className='text-6xl sm:text-8xl font-semibold italic pb-4'>
                 NIKE SHOP
               </h1>
@@ -63,7 +71,10 @@ const HomePage = () => {
               </p>
             </div>
             <div>
-              <Button className='bg-black mb-4 text-white flex items-center gap-2'>
+              <Button
+                size='xl'
+                className='bg-black mb-4 flex items-center gap-2 rounded-full px-5 py-3 dark:bg-white dark:text-black'
+              >
                 Shop Now <ArrowRight className='w-4 h-4' />
               </Button>
             </div>
@@ -76,7 +87,7 @@ const HomePage = () => {
               </label>
               <div className='flex'>
                 <input
-                  className='bg-gray-100 border sm:w-[300px] border-black'
+                  className='border sm:w-[300px] border-black'
                   name='email'
                   type='email'
                 />
@@ -86,10 +97,9 @@ const HomePage = () => {
           </div>
           <div>
             <img
-              className=''
+              className='object-contain'
               width={800}
               height={700}
-              style={{ objectFit: 'contain' }}
               alt='image'
               src='/images/nike-reactx.png'
             />
