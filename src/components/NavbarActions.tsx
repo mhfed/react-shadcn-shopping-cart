@@ -28,6 +28,13 @@ const NavbarActions = () => {
         <span className='ml-2 text-sm font-medium'>{cart.items.length}</span>
       </Button>
       <ModeToggle />
+      <Button
+        onClick={() => navigate('/signin')}
+        variant='outline'
+        className='flex items-center rounded-full px-4 py-2 border-border'
+      >
+        <span className='ml-2 text-sm font-medium'>Login</span>
+      </Button>
     </div>
   );
 };

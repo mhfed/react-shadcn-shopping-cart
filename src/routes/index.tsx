@@ -1,9 +1,9 @@
 import { Toaster } from '@/components/ui/toaster';
 import BaseLayout from '@/layouts/BaseLayout';
 import ManagerLayout from '@/layouts/ManagerLayout';
-import Signin from '@/pages/auth/Signin';
-import Signup from '@/pages/auth/Signup';
-import CartPage from '@/pages/auth/cart';
+import Signin from '@/pages/auth/sign-in';
+import Signup from '@/pages/auth/sign-up';
+import CartPage from '@/pages/cart';
 import HomePage from '@/pages/home';
 import DashboardPage from '@/pages/manager/dashboard';
 import ManagerProductPage from '@/pages/manager/product';
@@ -16,14 +16,14 @@ const Routers = () => {
       <Routes>
         <Route path='/' element={<BaseLayout />}>
           <Route index element={<HomePage />} />
-          <Route path='signup' element={<Signup />} />
-          <Route path='signin' element={<Signin />} />
           <Route path='cart' element={<CartPage />} />
         </Route>
         <Route path='/admin' element={<ManagerLayout />}>
           <Route index element={<DashboardPage />} />
           <Route path='products' element={<ManagerProductPage />} />
         </Route>
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/signin' element={<Signin />} />
       </Routes>
       <Toaster />
     </>
