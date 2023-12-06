@@ -1,6 +1,6 @@
 import { Toaster } from '@/components/ui/toaster';
-import BaseLayout from '@/layouts/BaseLayout';
-import ManagerLayout from '@/layouts/ManagerLayout';
+import BaseLayout from '@/layouts/Base';
+import ManagerLayout from '@/layouts/Manager';
 import Signin from '@/pages/auth/sign-in';
 import Signup from '@/pages/auth/sign-up';
 import CartPage from '@/pages/cart';
