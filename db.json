@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Product B",
+      "price": 1000,
+      "id": 13
+    },
+    {
+      "name": "Sản Phẩm C",
+      "price": 300,
+      "id": 14
+    },
+    {
+      "name": "Sản phẩm C",
+      "price": 300,
+      "id": 15
+    },
+    {
+      "name": "Sản phẩm 101",
+      "price": 200,
+      "id": 16
+    },
+    {
+      "name": "San phảm 102",
+      "price": 300,
+      "id": 17
+    },
+    {
+      "name": "chanh",
+      "price": 123,
+      "id": 18
+    },
+    {
+      "name": "AAAAAAAAAA",
+      "price": 123123,
+      "id": 19
+    }
+  ],
+  "users": []
+}
