@@ -1,21 +1,30 @@
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import useAuthMutation from '@/hooks/useAuthMutation';
-import { GithubIcon } from 'lucide-react';
+import { Button } from '@/components/ui/button'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { useToast } from '@/components/ui/use-toast'
+import useAuthMutation from '@/hooks/useAuthMutation'
+import { useNavigate } from 'react-router-dom'
 
 const SignInForm = () => {
-  const { form, onSubmit } = useAuthMutation({
+  const { toast } = useToast()
+  const navigate = useNavigate()
+
+  const { isPending, form, onSubmit } = useAuthMutation({
     action: 'SIGN_IN',
-    onSuccess: () => {},
-  });
+    onSuccess: () => {
+      toast({
+        variant: 'success',
+        title: 'Chúc mừng bạn!',
+        description: 'Đăng nhập thành công, chuyển hướng sau 2 giây!'
+      })
+
+      form.reset()
+
+      setTimeout(() => {
+        navigate('/')
+      }, 2000)
+    }
+  })
   return (
     <div className='grid gap-6'>
       <Form {...form}>
@@ -29,11 +38,7 @@ const SignInForm = () => {
                   <FormItem className='mt-2'>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input
-                        type='email'
-                        placeholder='xxx@gmail.com'
-                        {...field}
-                      />
+                      <Input type='email' placeholder='xxx@gmail.com' {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -53,45 +58,14 @@ const SignInForm = () => {
                 )}
               />
             </div>
-            <Button
-              className='mt-2'
-              // disabled={isLoading}
-              type='button'
-              // variant='outline'
-              onClick={() => {
-                // setIsGitHubLoading(true);
-                // signIn('github');
-              }}
-              // disabled={isLoading || isGitHubLoading}
-            >
-              <GithubIcon /> <span className='ml-2'>Sign In with Email</span>
+            <Button className='mt-2' disabled={isPending} type='submit'>
+              <span className='ml-2'>Đăng nhập</span>
             </Button>
           </div>
         </form>
       </Form>
-      <div className='relative'>
-        <div className='absolute inset-0 flex items-center'>
-          <span className='w-full border-t' />
-        </div>
-        <div className='relative flex justify-center text-xs uppercase'>
-          <span className='bg-background px-2 text-muted-foreground'>
-            Or continue with
-          </span>
-        </div>
-      </div>
-      <Button
-        type='button'
-        variant='outline'
-        onClick={() => {
-          // setIsGitHubLoading(true);
-          // signIn('github');
-        }}
-        // disabled={isLoading || isGitHubLoading}
-      >
-        <GithubIcon /> <span className='ml-2'>Github</span>
-      </Button>
     </div>
-  );
-};
+  )
+}
 
-export default SignInForm;
+export default SignInForm

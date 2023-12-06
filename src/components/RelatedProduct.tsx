@@ -1,13 +1,13 @@
-import { IProduct } from '@/common/type';
-import NoResults from '@/components/NoResults';
-import ProductCard from '@/components/ProductCard';
+import { IProduct } from '@/common/type'
+import NoResults from '@/components/NoResults'
+import ProductCard from '@/components/ProductCard'
 
 interface ProductListProps {
-  title: string;
-  items: IProduct[];
+  title: string
+  items: IProduct[]
 }
 
-const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
+const RelatedProduct: React.FC<ProductListProps> = ({ title, items }) => {
   return (
     <div className='space-y-4'>
       <h3 className='font-bold text-xl sm:text-3xl'>{title}</h3>
@@ -18,7 +18,7 @@ const ProductList: React.FC<ProductListProps> = ({ title, items }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductList;
+export default RelatedProduct

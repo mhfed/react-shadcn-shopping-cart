@@ -1,40 +1,44 @@
 {
   "products": [
     {
-      "name": "Product B",
-      "price": 1000,
-      "id": 13
-    },
-    {
       "name": "Sản Phẩm C",
       "price": 300,
-      "id": 14
-    },
-    {
-      "name": "Sản phẩm C",
-      "price": 300,
-      "id": 15
+      "id": 14,
+      "img": "https://picsum.photos/400",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
       "name": "Sản phẩm 101",
       "price": 200,
-      "id": 16
+      "id": 16,
+      "img": "https://picsum.photos/400",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
       "name": "San phảm 102",
       "price": 300,
-      "id": 17
+      "id": 17,
+      "img": "https://picsum.photos/400",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
       "name": "chanh",
       "price": 123,
-      "id": 18
-    },
-    {
-      "name": "AAAAAAAAAA",
-      "price": 123123,
-      "id": 19
+      "id": 18,
+      "img": "https://picsum.photos/400",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "chanh@gmail.com",
+      "password": "$2a$10$BVHe1Zho3XTak.SaEG3jBeuhqShHyma6uIuy.XzV4DnAJSd08pFre",
+      "id": 1
+    },
+    {
+      "email": "chanh2@gmail.com",
+      "password": "$2a$10$EncX4udmeL6WSqSpwkSH9eM86bWbUPXS5nVEiQ3F7PMlJqq981lWu",
+      "id": 2
+    }
+  ]
 }
