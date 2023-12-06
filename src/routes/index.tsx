@@ -1,4 +1,6 @@
+import PrivateRouter from '@/components/PrivateRouter'
 import { Toaster } from '@/components/ui/toaster'
+import { useLocalStorage } from '@/hooks/useStorage'
 import BaseLayout from '@/layouts/Base'
 import ManagerLayout from '@/layouts/Manager'
 import Signin from '@/pages/auth/sign-in'
@@ -10,9 +12,10 @@ import ManagerProductPage from '@/pages/manager/product'
 import ManagerProductAddPage from '@/pages/manager/product-add'
 import ManagerProductEditPage from '@/pages/manager/product-edit'
 
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 
 const Routers = () => {
+  const [user] = useLocalStorage('user', {})
   return (
     <>
       <Routes>
@@ -20,14 +23,21 @@ const Routers = () => {
           <Route index element={<HomePage />} />
           <Route path='cart' element={<CartPage />} />
         </Route>
-        <Route path='/admin' element={<ManagerLayout />}>
+        <Route
+          path='/admin'
+          element={
+            <PrivateRouter user={user}>
+              <ManagerLayout />
+            </PrivateRouter>
+          }
+        >
           <Route index element={<DashboardPage />} />
           <Route path='products' element={<ManagerProductPage />} />
           <Route path='product/add' element={<ManagerProductAddPage />} />
           <Route path='product/:id/edit' element={<ManagerProductEditPage />} />
         </Route>
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/signin' element={<Signin />} />
+        <Route path='/signup' element={!user || Object.keys(user).length === 0 ? <Signup /> : <Navigate to='/' />} />
+        <Route path='/signin' element={!user || Object.keys(user).length === 0 ? <Signin /> : <Navigate to='/' />} />
       </Routes>
       <Toaster />
     </>
