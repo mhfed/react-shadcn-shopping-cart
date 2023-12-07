@@ -13,18 +13,20 @@ const HomePage = () => {
     <div className='space-y-10 pb-10'>
       <div className='flex flex-col sm:flex-row justify-between'>
         <div className='flex flex-col sm:flex-row bg-[#ffffffb3] dark:bg-[#000000b3] gap-10'>
+          <div>
+            <img className='object-contain' width={800} height={700} alt='image' src='/images/vegetable.png' />
+          </div>
           <div className='px-3 sm:px-5 pt-5 flex gap-8 flex-col sm:pt-0'>
-            <div className='flex sm:pt-[60px] flex-col gap-3'>
-              <h1 className='text-6xl sm:text-8xl font-semibold italic pb-4'>NIKE SHOP</h1>
+            <div className='flex sm:pt-[48px] flex-col gap-3'>
+              <h1 className='text-6xl sm:text-8xl font-semibold italic pb-4'>VEGETABLE SHOP</h1>
               <p className='max-w-[500px]'>
-                Welcome to the ultimate destination for athletic excellence, where dreams take flight and champions are
-                made. Step into a world of limitless possibilities with Nike.
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia
               </p>
             </div>
             <div>
               <Button
                 size='xl'
-                className='bg-black mb-4 flex items-center gap-2 rounded-full px-5 py-3 dark:bg-white dark:text-black'
+                className='bg-black flex items-center gap-2 rounded-full px-5 dark:bg-white dark:text-black'
               >
                 Shop Now <ArrowRight className='w-4 h-4' />
               </Button>
@@ -39,13 +41,10 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div>
-            <img className='object-contain' width={800} height={700} alt='image' src='/images/nike-reactx.png' />
-          </div>
         </div>
       </div>
       <div className='flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8'>
-        <RelatedProduct title='Featured Products' items={data} />
+        <RelatedProduct title='Our Products' items={data} />
       </div>
     </div>
   )

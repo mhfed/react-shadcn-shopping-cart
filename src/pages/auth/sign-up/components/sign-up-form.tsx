@@ -15,8 +15,7 @@ const SignUpForm = () => {
     onSuccess: () => {
       toast({
         variant: 'success',
-        title: 'Chúc mừng bạn!',
-        description: 'Đăng ký tài khoản thành công!'
+        title: 'Sign up successfully!'
       })
 
       form.reset()
@@ -50,7 +49,7 @@ const SignUpForm = () => {
                 control={form.control}
                 render={({ field }) => (
                   <FormItem className='mt-2'>
-                    <FormLabel>Mật khẩu</FormLabel>
+                    <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input type='password' placeholder='*******' {...field} />
                     </FormControl>
@@ -60,7 +59,7 @@ const SignUpForm = () => {
               />
             </div>
             <Button className='mt-2' disabled={isPending} type='submit'>
-              <GithubIcon /> <span className='ml-2'>Đăng ký</span>
+              <GithubIcon /> <span className='ml-2'>Register</span>
             </Button>
           </div>
         </form>

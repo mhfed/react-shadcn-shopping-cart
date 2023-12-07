@@ -1,44 +1,67 @@
 {
   "products": [
     {
-      "name": "Sản Phẩm C",
+      "name": "Product CDAA",
       "price": 300,
       "id": 14,
-      "img": "https://picsum.photos/400",
+      "img": "https://themewagon.github.io/vegefoods/images/product-8.jpg",
       "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
-      "name": "Sản phẩm 101",
+      "name": "Product A B C",
       "price": 200,
       "id": 16,
-      "img": "https://picsum.photos/400",
+      "img": "https://themewagon.github.io/vegefoods/images/product-4.jpg",
       "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
       "name": "San phảm 102",
       "price": 300,
       "id": 17,
-      "img": "https://picsum.photos/400",
+      "img": "https://themewagon.github.io/vegefoods/images/product-2.jpg",
       "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     },
     {
-      "name": "chanh",
+      "name": "Product E",
       "price": 123,
       "id": 18,
-      "img": "https://picsum.photos/400",
+      "img": "https://themewagon.github.io/vegefoods/images/product-1.jpg",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
+    },
+    {
+      "name": "Product C",
+      "price": 300,
+      "id": 19,
+      "img": "https://themewagon.github.io/vegefoods/images/product-8.jpg",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
+    },
+    {
+      "name": "Product A B C",
+      "price": 200,
+      "id": 20,
+      "img": "https://themewagon.github.io/vegefoods/images/product-4.jpg",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
+    },
+    {
+      "name": "San phảm 102",
+      "price": 300,
+      "id": 21,
+      "img": "https://themewagon.github.io/vegefoods/images/product-2.jpg",
+      "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
+    },
+    {
+      "name": "Product E",
+      "price": 123,
+      "id": 22,
+      "img": "https://themewagon.github.io/vegefoods/images/product-1.jpg",
       "description": "Soft suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cozy) AJ1"
     }
   ],
   "users": [
     {
-      "email": "chanh@gmail.com",
-      "password": "$2a$10$BVHe1Zho3XTak.SaEG3jBeuhqShHyma6uIuy.XzV4DnAJSd08pFre",
+      "email": "nmhieu04091999@gmail.com",
+      "password": "$2a$10$sVCrKdSqaRuiXir1riSvCep8i7jueBjaAflLr5S0LORYzZlRfnZ9K",
       "id": 1
-    },
-    {
-      "email": "chanh2@gmail.com",
-      "password": "$2a$10$EncX4udmeL6WSqSpwkSH9eM86bWbUPXS5nVEiQ3F7PMlJqq981lWu",
-      "id": 2
     }
   ]
 }

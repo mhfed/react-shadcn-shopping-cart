@@ -8,29 +8,15 @@ import { HelpCircle, Pencil, PlusSquare, Trash2 } from 'lucide-react'
 export const getColumns = (onRemove: (product: IProduct) => void): ColumnDef<IProduct>[] => [
   {
     accessorKey: 'name',
-    header: () => (
-      <div className='text-red-500'>
-        Tên sản phẩm
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <HelpCircle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Nội dung</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
-    )
+    header: 'Product Name'
   },
   {
     accessorKey: 'price',
-    header: 'Giá sản phẩm'
+    header: 'Product Price'
   },
   {
     accessorKey: 'categoryId',
-    header: 'Danh mục'
+    header: 'Category'
   },
   {
     id: 'action',
@@ -38,7 +24,7 @@ export const getColumns = (onRemove: (product: IProduct) => void): ColumnDef<IPr
     header: () => (
       <Link to={`/admin/product/add`}>
         <Button className='rounded-full'>
-          <PlusSquare size={18} className='mr-2' /> Thêm
+          <PlusSquare size={18} className='mr-2' /> Add
         </Button>
       </Link>
     ),
@@ -48,7 +34,7 @@ export const getColumns = (onRemove: (product: IProduct) => void): ColumnDef<IPr
         <>
           <Link to={`/admin/product/${product.id}/edit`}>
             <Button variant={'warning'}>
-              <Pencil size={18} className='mr-2' /> Sửa
+              <Pencil size={18} className='mr-2' /> Edit
             </Button>
           </Link>
           <Button
@@ -58,7 +44,7 @@ export const getColumns = (onRemove: (product: IProduct) => void): ColumnDef<IPr
             variant={'destructive'}
             className='ml-2'
           >
-            <Trash2 size={18} className='mr-2' /> Xóa
+            <Trash2 size={18} className='mr-2' /> Delete
           </Button>
         </>
       )

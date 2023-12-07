@@ -1,65 +1,33 @@
-import {
-  CategoryIcon,
-  DashBoardIcon,
-  ProductIcon,
-  SettingIcon,
-  SignInIcon,
-  SignUpIcon,
-  UserIcon,
-} from '@/components/SvgIcon';
-import { Link, useLocation } from 'react-router-dom';
+import { CategoryIcon, DashBoardIcon, ProductIcon } from '@/components/SvgIcon'
+import { Link, useLocation } from 'react-router-dom'
 
 export const Sidebar = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   const navConfig = [
     {
       title: 'Dashboard',
       icon: DashBoardIcon,
-      href: '/admin',
+      href: '/admin'
     },
     {
       title: 'Products',
       icon: ProductIcon,
-      href: '/admin/products',
+      href: '/admin/products'
     },
     {
       title: 'Categories',
       icon: CategoryIcon,
-      href: '/admin/categories',
-    },
-    {
-      title: 'Users',
-      icon: UserIcon,
-      href: '/admin/users',
-    },
-    {
-      title: 'Settings',
-      icon: SettingIcon,
-      href: '/admin/settings',
-    },
-    {
-      title: 'Sign In',
-      icon: SignInIcon,
-      href: '/sign-in',
-    },
-    {
-      title: 'Sign Up',
-      icon: SignUpIcon,
-      href: '/sign-up',
-    },
-  ];
+      href: '/admin/categories'
+    }
+  ]
 
   const classActive = (path: string) => {
-    return pathname === path
-      ? ' bg-gradient-to-tl from-purple-700 to-pink-500'
-      : '';
-  };
+    return pathname === path ? ' bg-gradient-to-tl from-blue-600 to-lime-400' : ''
+  }
   const classActive2 = (path: string) => {
-    return pathname === path
-      ? ' shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700'
-      : '';
-  };
+    return pathname === path ? ' shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700' : ''
+  }
   return (
     <aside className='max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-white p-0 antialiased shadow-none transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent'>
       <div className='h-19.5'>
@@ -73,13 +41,11 @@ export const Sidebar = () => {
           target='_blank'
         >
           <img
-            src='../assets/img/logo-ct.png'
+            src='/images/logo-vegetable.png'
             className='inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-8'
             alt='main_logo'
           />
-          <span className='ml-1 font-semibold transition-all duration-200 ease-nav-brand'>
-            Chanhday Store
-          </span>
+          <span className='ml-1 font-semibold transition-all duration-200 ease-nav-brand'>Vegetable Store</span>
         </Link>
       </div>
       <hr className='h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent' />
@@ -88,7 +54,7 @@ export const Sidebar = () => {
       <div className='items-center block w-auto max-h-screen h-sidenav grow basis-full'>
         <ul className='flex flex-col pl-0 mb-0'>
           {navConfig.map((item) => {
-            const Icon = item.icon;
+            const Icon = item.icon
             return (
               <li className='mt-0.5 w-full' key={item.href}>
                 <Link
@@ -104,15 +70,13 @@ export const Sidebar = () => {
                   >
                     <Icon isActive={pathname === item.href} />
                   </div>
-                  <span className='ml-1 duration-300 opacity-100 pointer-events-none ease-soft'>
-                    {item.title}
-                  </span>
+                  <span className='ml-1 duration-300 opacity-100 pointer-events-none ease-soft'>{item.title}</span>
                 </Link>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
     </aside>
-  );
-};
+  )
+}

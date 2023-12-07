@@ -1,34 +1,50 @@
-import { cn } from '@/lib/utils';
-import { Link, useLocation } from 'react-router-dom';
+import { cn } from '@/lib/utils'
+import { Link, useLocation } from 'react-router-dom'
 
 type routeDataType = {
-  id: string;
-  name: string;
-}[];
+  id: string
+  name: string
+}[]
 
 const routeData: routeDataType = [
   {
-    id: 'shoes',
-    name: 'Shoes',
+    id: 'vegetable',
+    name: 'Vegetable'
   },
   {
-    id: 'clothing',
-    name: 'Clothing',
+    id: 'meat',
+    name: 'Meat'
   },
   {
-    id: 'accessories',
-    name: 'Accessories',
+    id: 'seafood',
+    name: 'Seafood'
   },
-];
+  {
+    id: 'fastfood',
+    name: 'Fastfood'
+  },
+  {
+    id: 'fruit',
+    name: 'Fruit'
+  },
+  {
+    id: 'juice',
+    name: 'Juice'
+  },
+  {
+    id: 'mix',
+    name: 'Mix'
+  }
+]
 
 const MainNav: React.FC = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   const routes = routeData.map((route) => ({
     href: `/category/${route.id}`,
     label: route.name,
-    active: pathname === `/category/${route.id}`,
-  }));
+    active: pathname === `/category/${route.id}`
+  }))
 
   return (
     <nav className='mx-3 md:mx-6 flex overflow-auto scrollbar-hide whitespace-nowrap items-center space-x-4 lg:space-x-6'>
@@ -45,7 +61,7 @@ const MainNav: React.FC = () => {
         </Link>
       ))}
     </nav>
-  );
-};
+  )
+}
 
-export default MainNav;
+export default MainNav

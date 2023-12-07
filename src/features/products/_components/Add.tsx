@@ -14,8 +14,7 @@ const ProductAdd = () => {
     onSuccess: () => {
       toast({
         variant: 'success',
-        title: 'Chúc mừng bạn!',
-        description: 'Bạn đã thêm sản phẩm thành công'
+        title: 'Add product successfully!'
       })
       form.reset()
       setTimeout(() => {
@@ -31,9 +30,9 @@ const ProductAdd = () => {
           name='name'
           render={({ field }) => (
             <FormItem className='mt-4'>
-              <FormLabel>Tên</FormLabel>
+              <FormLabel>Product Name</FormLabel>
               <FormControl>
-                <Input type='text' placeholder='Tên sản phẩm' {...field} />
+                <Input type='text' placeholder='Product name' {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -43,9 +42,9 @@ const ProductAdd = () => {
           name='price'
           render={({ field }) => (
             <FormItem className='mt-4'>
-              <FormLabel>Giá</FormLabel>
+              <FormLabel>Product Price</FormLabel>
               <FormControl>
-                <Input type='number' placeholder='Giá sản phẩm' {...field} />
+                <Input type='number' placeholder='Product price' {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -53,7 +52,7 @@ const ProductAdd = () => {
         <div className='mt-8'>
           <Button type='submit'>
             <PlusSquare />
-            Thêm sản phẩm
+            Add Product
           </Button>
         </div>
       </form>

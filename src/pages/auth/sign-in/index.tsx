@@ -16,7 +16,7 @@ const Signin = () => {
           Register
         </Link>
         <div className='relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex'>
-          <div className='absolute inset-0 bg-zinc-900' />
+          <div className="absolute inset-0 bg-zinc-900 bg-[url('/images/vegetable.png')] bg-cover bg-no-repeat bg-center drop-shadow-md" />
           <div className='relative z-20 flex items-center text-lg font-medium'>
             <Link to='/'>
               <Button variant='secondary'>
@@ -34,14 +34,14 @@ const Signin = () => {
                   necessitatibus dolor. Impedit!.&rdquo;
                 </i>
               </p>
-              <footer className='text-md text-end'>Chanh day</footer>
+              <footer className='text-md text-end'>Minh Hieu</footer>
             </blockquote>
           </div>
         </div>
         <div className='lg:p-8'>
           <div className='mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]'>
             <div className='flex flex-col space-y-2 text-center'>
-              <h1 className='text-2xl font-semibold tracking-tight'>Đăng nhập với Email</h1>
+              <h1 className='text-2xl font-semibold tracking-tight'>Sign In with Email</h1>
               <p className='text-sm text-muted-foreground'>Enter your email below to sign in your account</p>
             </div>
 
@@ -49,7 +49,7 @@ const Signin = () => {
 
             <p className='px-8 text-center text-sm text-muted-foreground'>
               <Link to='/signup' className='hover:text-brand underline underline-offset-4'>
-                Chưa có tài khoản? <Button variant='link'>Đăng ký</Button>
+                ChDon&apos;t have an account? <Button variant='link'>Register</Button>
               </Link>
             </p>
           </div>

@@ -1,40 +1,38 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Links = [
   {
     name: 'Guides',
-    href: '',
+    href: ''
   },
   {
     name: 'Terms of Sale',
-    href: '',
+    href: ''
   },
   {
     name: 'Terms of Use',
-    href: '',
+    href: ''
   },
   {
-    name: 'Nike Privacy Policy',
-    href: '',
+    name: 'Vegetable Privacy Policy',
+    href: ''
   },
   {
     name: 'Your Privacy Choices',
-    href: '',
-  },
-];
+    href: ''
+  }
+]
 
 const Footer = () => {
-  const year = new Date().getFullYear();
-
   return (
-    <div className='bg-black'>
-      <div className='mx-auto py-20 text-center flex flex-col gap-y-5 items-center justify-center'>
+    <div className='bg-primary'>
+      <div className='mx-auto py-10 text-center flex flex-col gap-y-5 items-center justify-center'>
         <div className='flex items-center justify-center gap-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24px'
             height='24px'
-            color='#888888'
+            color='#fff'
             className='social-icons'
             viewBox='0 0 20 20'
           >
@@ -47,7 +45,7 @@ const Footer = () => {
             xmlns='http://www.w3.org/2000/svg'
             width='24px'
             height='24px'
-            color='#888888'
+            color='#fff'
             className='social-icons'
             viewBox='0 0 512 512'
           >
@@ -60,7 +58,7 @@ const Footer = () => {
             xmlns='http://www.w3.org/2000/svg'
             width='24px'
             height='24px'
-            color='#888888'
+            color='#fff'
             className='social-icons'
             viewBox='0 0 20 20'
           >
@@ -73,7 +71,7 @@ const Footer = () => {
             xmlns='http://www.w3.org/2000/svg'
             width='24px'
             height='24px'
-            color='#888888'
+            color='#fff'
             className='social-icons'
             viewBox='0 0 20 20'
           >
@@ -85,30 +83,20 @@ const Footer = () => {
         </div>
         <div className='flex gap-3 px-2 mx-auto items-center justify-center flex-wrap'>
           {Links.map((link, idx) => (
-            <Link
-              className='hover:text-white text-xs text-[#888888]'
-              key={idx}
-              to={link.href}
-            >
+            <Link className='hover:text-white text-xs text-[#fff]' key={idx} to={link.href}>
               {link.name}
             </Link>
           ))}
         </div>
       </div>
-      <p className='text-center pt-6 text-[#888888] text-xs'>
-        &copy; {year} Nike Inc, All Rights Reserved
-      </p>
-      <p className='text-center py-2 text-[#888888] text-[9px]'>
+      <p className='text-center py-2 text-[#fff] text-[9px]'>
         Built by{' '}
-        <Link
-          to='https://github.com/OgaDavid'
-          className='underline italic hover:text-white'
-        >
-          Oga David.
+        <Link to='https://github.com/OgaDavid' className='underline italic hover:text-white'>
+          Minh Hieu.
         </Link>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -14,8 +14,8 @@ const SignInForm = () => {
     onSuccess: () => {
       toast({
         variant: 'success',
-        title: 'Chúc mừng bạn!',
-        description: 'Đăng nhập thành công, chuyển hướng sau 2 giây!'
+        title: 'Welcome!',
+        description: 'Login successfully!'
       })
 
       form.reset()
@@ -49,7 +49,7 @@ const SignInForm = () => {
                 control={form.control}
                 render={({ field }) => (
                   <FormItem className='mt-2'>
-                    <FormLabel>Mật khẩu</FormLabel>
+                    <FormLabel>Password</FormLabel>
                     <FormControl>
                       <Input type='password' placeholder='*******' {...field} />
                     </FormControl>
@@ -59,7 +59,7 @@ const SignInForm = () => {
               />
             </div>
             <Button className='mt-2' disabled={isPending} type='submit'>
-              <span className='ml-2'>Đăng nhập</span>
+              <span className='ml-2'>Login</span>
             </Button>
           </div>
         </form>

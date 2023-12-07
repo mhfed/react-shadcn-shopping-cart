@@ -16,11 +16,11 @@ export const AuthAction = () => {
 
   const handleLogoutOrLogin = () => {
     if (isLogin) {
-      // Đăng xuất
+      // Logout
       removeUser()
       toast({
         variant: 'success',
-        title: 'Đăng xuất thành công!'
+        title: 'Logout successfully!'
       })
       setTimeout(() => {
         navigate('/signin')
@@ -33,16 +33,12 @@ export const AuthAction = () => {
   return (
     <>
       {isLogin ? (
-        <Button variant='outline' className='flex items-center rounded-full px-4 py-2 border-border'>
+        <Button variant='ghost' className='flex items-center px-4 py-2'>
           <span className='ml-2 text-sm font-medium'>Hi - {user.user.email}</span>
         </Button>
       ) : null}
-      <Button
-        onClick={handleLogoutOrLogin}
-        variant='outline'
-        className='flex items-center rounded-full px-4 py-2 border-border'
-      >
-        <span className='ml-2 text-sm font-medium'>{isLogin ? 'Đăng xuất' : 'Đăng nhập'}</span>
+      <Button onClick={handleLogoutOrLogin} variant='outline' className='flex items-center px-4 py-2 border-border'>
+        <span className='ml-2 text-sm font-medium'>{isLogin ? 'Logout' : 'Login'}</span>
       </Button>
     </>
   )
